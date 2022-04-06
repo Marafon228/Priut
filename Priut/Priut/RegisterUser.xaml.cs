@@ -28,6 +28,8 @@ namespace Priut
             var result = client.UploadString("http://192.168.0.101:3245/api/Users/RegisterUser", JsonConvert.SerializeObject(CurrentUser));
             if (result != null)
             {
+                
+                await DisplayAlert("Message", "Registration was successful", "OK");
                 await Navigation.PushAsync(new MainPage());
             }
             else

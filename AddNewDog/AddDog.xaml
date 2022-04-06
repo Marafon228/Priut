@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddDog"
-      Name="AddDogName">
+      Name="AddDogName"
+      Background="WhiteSmoke">
 
     <Grid DataContext="{Binding ElementName=AddDogName, Path=.}">
         <Grid.RowDefinitions>
@@ -17,22 +18,22 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-            <TextBlock Text="Name: "></TextBlock>
-            <TextBox Width="170" Height="30" Text="{Binding CurrentDog.Name}"></TextBox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="10">
+            <TextBlock Text="Name: " FontSize="25"></TextBlock>
+            <TextBox Width="157" Height="30" Margin="80 0 0 0" Text="{Binding CurrentDog.Name}"  FontSize="20" />
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="1">
-            <TextBlock Text="Description: "></TextBlock>
-            <TextBox Width="170" Height="30" Text="{Binding CurrentDog.Description}"></TextBox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="1" Margin="10">
+            <TextBlock Text="Description: " FontSize="25"></TextBlock>
+            <TextBox Margin="20 0 0 0" Width="170" Height="30" Text="{Binding CurrentDog.Description}" FontSize="20" />
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="2">
-            <TextBlock Text="Phone: "></TextBlock>
-            <TextBox Width="170" Height="30" Text="{Binding CurrentDog.Phone}"></TextBox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="2" Margin="10">
+            <TextBlock Text="Phone: " FontSize="25"></TextBlock>
+            <TextBox Margin="75 0 0 0" Width="170" Height="30" Text="{Binding CurrentDog.Phone}" FontSize="20" ></TextBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="3">
-            <TextBlock Text="Image: "></TextBlock>
-            <Button Content="Image" Click="Button_Click"></Button>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="3" Margin="10">
+            <TextBlock Text="Image: " FontSize="25"></TextBlock>
+            <Button Margin="75 0 0 0" Content="Изображение" Click="Button_Click" FontSize="15" ></Button>
         </StackPanel>
-        <Button Grid.Row="4" Width="100" Height="50" Content="SAVE" Click="Button_Click_1"></Button>
+        <Button Grid.Row="4" Width="175" Height="30" Content="Сохранить" Click="Button_Click_1" FontSize="20" ></Button>
     </Grid>
 </Page>
