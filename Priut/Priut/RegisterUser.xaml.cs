@@ -25,7 +25,7 @@ namespace Priut
         {
             var client = new WebClient();
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-            var result = client.UploadString("http://192.168.0.101:3245/api/Users/RegisterUser", JsonConvert.SerializeObject(CurrentUser));
+            var result = client.UploadString("http://192.168.0.100:3245/api/Users/RegisterUser", JsonConvert.SerializeObject(CurrentUser));
             if (result != null)
             {
                 

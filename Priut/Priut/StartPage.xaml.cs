@@ -18,7 +18,7 @@ namespace Priut
         {
             InitializeComponent();
             var client = new WebClient();
-            var response = client.DownloadString("http://192.168.0.101:3245/api/Dogs/GetDog");
+            var response = client.DownloadString("http://192.168.0.100:3245/api/Dogs/GetDog");
             ListViewProducts.ItemsSource = JsonConvert.DeserializeObject<List<Dog>>(response);
         }
 
