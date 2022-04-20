@@ -35,7 +35,7 @@ namespace Priut
                 }
                 else
                 {
-                    await DisplayAlert("Message", "Registration invalid", "OK");
+                    await DisplayAlert("Message", "Registration fail", "OK");
 
                 }
             }

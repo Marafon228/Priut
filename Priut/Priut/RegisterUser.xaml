@@ -6,35 +6,22 @@
     <ContentPage.Content>
     <Grid>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Login"></Label>
-                <Entry WidthRequest="120" Text="{Binding CurrentUser.Login}"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Password"></Label>
-                <Entry WidthRequest="120" IsPassword="True" Text="{Binding CurrentUser.Password}"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Password"></Label>
-                <Entry WidthRequest="120" IsPassword="True"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="FirsName"></Label>
-                <Entry WidthRequest="120" Text="{Binding CurrentUser.FIO}"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Adress"></Label>
-                <Entry WidthRequest="120" Text="{Binding CurrentUser.Adress}"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Phone"></Label>
-                <Entry WidthRequest="120" Text="{Binding CurrentUser.Phone}"></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Email"></Label>
-                <Entry WidthRequest="120" Text="{Binding CurrentUser.Email}"></Entry>
-            </StackLayout>
-
+            <StackLayout Grid.Row="0">
+                <Label Text="Please enter your credentials to register" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.Login}"
+                Placeholder="Login" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.Password}"
+                Placeholder="Password"
+                IsPassword="True" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.FIO}"
+                Placeholder="FIO" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.Adress}"
+                Placeholder="Address" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.Phone}"
+                Placeholder="Phone" />
+                <Entry WidthRequest="120" Text="{Binding CurrentUser.Email}"
+                Placeholder="Email" />
+            </StackLayout>             
             <StackLayout>
                 <Button Text="Sign In" Clicked="Btn_Save" ></Button>
                 <Button Text="Cancel" Clicked="Btn_Back"></Button>

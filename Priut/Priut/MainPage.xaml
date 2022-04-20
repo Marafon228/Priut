@@ -5,21 +5,26 @@
              >
 
     <ContentPage.Content>
-        <Grid>
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Login"></Label>
-                    <Entry WidthRequest="120" Text="{Binding CurrentUser.Login}"></Entry>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Password"></Label>
-                    <Entry WidthRequest="120" IsPassword="True" Text="{Binding CurrentUser.Password}"></Entry>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="Sign In"  Clicked="Btn_SignIn"></Button>
-                    <Button Text="Registration" Clicked="Btn_Reg"></Button>
-                </StackLayout>
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Please enter your credentials" />
+                <Entry Text="{Binding CurrentUser.Login}"
+                       Placeholder="Login" />
 
+                <Entry Text="{Binding CurrentUser.Password}"
+                       Placeholder="Password"
+                       IsPassword="True" />
+                
+            </StackLayout>
+            <StackLayout Grid.Row="2"  Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Button Text="Sign In" Clicked="Btn_SignIn" />
+                <Button  Text="Registration" Clicked="Btn_Reg" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
